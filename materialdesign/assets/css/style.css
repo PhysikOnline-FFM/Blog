@@ -1,0 +1,65 @@
+#headline {
+    padding-top: 100px;
+}
+
+body {
+    font-size: 120%;
+}
+
+.trans {
+    opacity: 0.5;
+}
+
+div.containernav {
+    margin-left: 50px;
+    padding-right: 50px;
+    
+}
+
+/*
+#nav {
+    background-image: url("../images/nav.jpeg");
+    background-size: 100%;
+    background-position: center top;
+}
+*/
+
+#single-parallax {
+    height: 400px;
+}
+
+.parallax-container {
+      height: 550px;
+}
+
+.overlay {
+    height: 600px;
+}
+
+div.article {
+    padding: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+div.extrapadding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/*
+
+<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+         echo '<div style="background: url('. $url.')">'; ?>
+        
+        </div>  */
+body.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card-img {
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
