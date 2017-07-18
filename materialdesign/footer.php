@@ -4,6 +4,8 @@
 
 <script type="text/javascript"></script>
 
+<script src="<?php bloginfo('template_url') ?>/assets/js/ThatsNotYoChild.js"></script>
+
 <script src="<?php bloginfo('template_url') ?>/assets/js/init.js"></script>
 
 </body>
