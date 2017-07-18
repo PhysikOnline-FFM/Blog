@@ -19,11 +19,11 @@ get_header();
 <!--TITELBILD-->
 <div class="parallax-container">
     <div class="parallax">
-        <img src="<?php bloginfo('template_url')?>/assets/images/desk.jpg">
+        <img src="<?php bloginfo('template_url')?>/assets/images/desk_darken.jpg">
     </div>
-    <div id="parent" class="black trans overlay">
+    <div>
     <div id="headline" class="caption center-align">
-      <h3 class="white-text light">PhysikOnline Blog</h3>
+      <h3 id="headline-text" class="white-text light">PhysikOnline Blog</h3>
       <h5 class="light grey-text text-lighten-3">Alles rund um unsere Projekte, wer wir sind und was wir vorhaben.</h5>
     </div>
     </div>
@@ -51,10 +51,10 @@ get_header();
         </div>
         <div class="card-stacked" >
         <div class="card-content">
-            <h4 class="thin"> 
+            <h4 class="light"> 
             <?php the_title(); ?>
             </h4>
-          <span class="thin">
+          <span class="light">
           <?php the_content(); ?>
           <br><br>
           <a href="<?php the_permalink()?>"> mehr.. </a>
