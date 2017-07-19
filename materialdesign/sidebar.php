@@ -17,7 +17,10 @@
     <div class="card">
         <div class="card-content">
             <span class="card-title">Tags</span>
-            <?php the_tags( '<div class="chip">','</div><div class="chip">','</div>' ); ?>
+            <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
+                <div class="chip"><?php wp_tag_cloud( 'smallest=10&largest=10&separator=</div> <div class="chip">' ); ?>
+                </div>
+            <?php endif; ?>
             <br><br>
         </div>
     </div>

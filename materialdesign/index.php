@@ -6,7 +6,7 @@ get_header();
 <nav id="nav" class="light-blue darken-4 z-depth-3">
     <div class="containernav">
         <div class="nav-wrapper">
-        <a href="<?php bloginfo('template_url'); ?>/index.php" class="brand-logo white-text">Logo</a>
+        <a href="<?php echo home_url(); ?>" class="brand-logo white-text">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">   
             <li><a class="white-text" href="<?php bloginfo('template_url'); ?>/page.php">Projekte</a></li>
             <li><a class="white-text" href="badges.html">Über Uns</a></li>
@@ -41,7 +41,8 @@ get_header();
     <div id="Main" class="col m9">
     
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>  
-      <div class="card horizontal" >
+<!-- CARD     -->
+    <div class="card horizontal" >
         <div class="card-image">
          <img id="card-img" src="
           <?php if ( has_post_thumbnail() )
@@ -60,19 +61,19 @@ get_header();
           <a href="<?php the_permalink()?>"> mehr.. </a>
           </span>
         </div>
-        
         </div>
       </div>
-        
-    <?php endwhile; endif; ?>  
-      
-    </div>
+     <?php get_the_tags(); ?>       
+     <?php endwhile; endif; ?>  
+    </div> 
+<!-- CARD -->
+
+
      <!--SIDEBAR-->
      <?php get_sidebar() ?>
-     
-    </div>        
+ 
+</div>        
 </div>
-
 </div>
 </div>
 
