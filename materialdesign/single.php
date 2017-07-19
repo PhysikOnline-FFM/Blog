@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/materialize.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -43,7 +44,10 @@
           <div class="container">
               <div class="card">
                   <div class="article">
-                     <h3 class="thin"><?php the_title(); ?></h3>
+                     <h1 class="thin"><?php the_title(); ?></h1>
+                        <div id="meta">
+                        <span id="subtitle" class="thin small"> Von <?php the_author(); ?>, &emsp;  <i class="material-icons tiny thin">access_time</i>  <?php the_date('d.m.Y'); ?> </span>
+                        </div>  
                       <span class="light"> 
                       <?php the_content(); ?> 
                       </span>
@@ -55,7 +59,9 @@
       
 </div>
 
-
+<!-- erstellt am: <?php the_date('d.m.Y'); ?> | 
+                             von: <?php the_author(); ?> | 
+                            Kategorie(n): <?php the_category(', '); ?> -->
 
 
 
