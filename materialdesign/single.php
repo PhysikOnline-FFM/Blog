@@ -21,7 +21,7 @@
 <nav class="light-blue darken-4" >
     <div class="container">
         <div class="nav-wrapper">
-        <a href="../index.php" class="brand-logo white-text">Logo</a>
+        <a href="<?php echo home_url(); ?>" class="brand-logo white-text">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="white-text" href="sass.html">Projekte</a></li>
             <li><a class="white-text" href="badges.html">Über Uns</a></li>
