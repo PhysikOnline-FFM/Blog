@@ -1,21 +1,23 @@
-<?php 
-get_header(); ?>
+<?php get_header(); ?>
  
+   <div id="main">
+       
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+         <div class="entry">
+            <?php the_content(); ?>
+         </div>
+      <?php endwhile; endif; ?>
+          
+      <?php 
+         /*
+          * Kommentare sind auf Seiten deaktiviert. 
+          * Möchtest du die Kommentarfunktion auf Seiten aktivieren, entferne einfach die beiden "//"-Zeichen vor "comments_template();"
+          */
+          
+         //comments_template();
+      ?>
+             
+   </div><!-- main -->
+  
  
-<div class="card">
-<div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" src="images/office.jpg">
-</div>
-<div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-    <p><a href="#">This is a link</a></p>
-</div>
-<div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-</div>
-</div>
-
-
-</body>
-</html>
+<?php get_footer(); ?>

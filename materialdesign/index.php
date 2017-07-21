@@ -7,10 +7,18 @@ get_header();
     <div class="containernav">
         <div class="nav-wrapper">
         <a href="<?php echo home_url(); ?>" class="brand-logo white-text">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">   
-            <li><a class="white-text" href="<?php bloginfo('template_url'); ?>/page.php">Projekte</a></li>
+        <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+            <?php 
+            $args = array(
+                'title_li'        => 0,
+            ); 
+
+            wp_list_pages( $args ); ?>
+<!--
+            <li><a class="white-text" >Projekte</a></li>
             <li><a class="white-text" href="badges.html">Über Uns</a></li>
             <li><a class="white-text" href="collapsible.html">Kontakt</a></li>
+-->
         </ul>
         </div>
     </div>

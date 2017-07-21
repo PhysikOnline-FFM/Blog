@@ -33,8 +33,8 @@ div.containernav {
     height: 400px;
 }
 
-.parallax-container {
-      height: 550px;
+.parallax-container {    
+    height: 90vh;
 }
 
 .overlay {

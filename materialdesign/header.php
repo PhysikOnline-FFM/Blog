@@ -8,10 +8,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/materialize.min.css"  media="screen,projection"/>
+
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css"  media="screen,projection"/>
+
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css" media="screen,projection">
-<!--<?php wp_head(); ?>-->
+
 </head>
 
 <body <?php body_class(); ?> >
