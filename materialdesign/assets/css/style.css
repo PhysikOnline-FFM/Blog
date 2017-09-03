@@ -30,7 +30,7 @@ div.containernav {
 }
 
 .parallax-container {    
-    height: 92vh;
+    height: 100vh;
 }
 
 .overlay {
@@ -60,7 +60,7 @@ body.background {
     overflow: hidden;
 }
 
-.wrapper {
+.wrap {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 100px;
