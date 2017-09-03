@@ -45,7 +45,7 @@ get_header();
 Neueste Beiträge
 </h3>
 </div> 
-<div id="Main" class="col m9">
+<div id="Main" class="col s12 m12 l9">
  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>    
  
     <!-- CARD     -->

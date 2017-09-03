@@ -30,7 +30,7 @@ div.containernav {
 }
 
 .parallax-container {    
-    height: 95vh;
+    height: 100vh;
 }
 
 .overlay {
@@ -66,3 +66,4 @@ body.background {
     margin-left: 100px;
     margin-right: 100px;
 }
+
