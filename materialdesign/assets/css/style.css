@@ -1,7 +1,11 @@
 #headline {
-    padding-top: 170px;
+    padding-top: 200px;
 }
 
+.section-headline {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 
 body {
     font-size: 120%;
@@ -21,20 +25,12 @@ div.containernav {
     font-style: italic;
 }
 
-/*
-#nav {
-    background-image: url("../images/nav.jpeg");
-    background-size: 100%;
-    background-position: center top;
-}
-*/
-
 #single-parallax {
     height: 400px;
 }
 
 .parallax-container {    
-    height: 90vh;
+    height: 92vh;
 }
 
 .overlay {
@@ -52,12 +48,7 @@ div.extrapadding {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-/*
 
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-         echo '<div style="background: url('. $url.')">'; ?>
-        
-        </div>  */
 body.background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,4 +58,11 @@ body.background {
     min-height: 100%;
     min-width: 100%;
     overflow: hidden;
+}
+
+.wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }

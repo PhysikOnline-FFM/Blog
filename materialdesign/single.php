@@ -13,24 +13,36 @@
 </head>
 
 <body
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-         echo ' style="background: url('. $url.'); " '; ?> 
->
+<?php
+    if (has_post_thumbnail()) {
+        $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+         echo ' style="background: url('. $url.'); " '; }
+    else {
+        echo ' class="grey darken-4" ';
+         }
+?> >
 <!-- NAVBAR -->    
 <div id="Header">
-<nav class="light-blue darken-4" >
-    <div class="container">
+
+<nav id="nav" class="light-blue darken-4 z-depth-3">
+    <div class="containernav">
         <div class="nav-wrapper">
         <a href="<?php echo home_url(); ?>" class="brand-logo white-text">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="white-text" href="sass.html">Projekte</a></li>
-            <li><a class="white-text" href="badges.html">Über Uns</a></li>
-            <li><a class="white-text" href="collapsible.html">Kontakt</a></li>
+        <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+            <?php 
+            $args = array(
+                'title_li'        => 0,
+            ); 
+
+            wp_list_pages( $args ); ?>
+
         </ul>
         </div>
     </div>
-</nav>
+</nav>    
+
 </div>
+<!--END NAVBAR-->
 
 <?php the_post(); ?>
 

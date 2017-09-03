@@ -34,3 +34,7 @@
 </form>
  
 </div> <!-- kommentar_formular -->
+
+<!--   <?php if (have_posts()) : if(is_tag('highlight')) : while (have_posts()) : the_post(); ?>    -->
+<!-- <?php get_the_tags(); ?>       
+<?php endwhile; endif; endif; ?>  -->
