@@ -1,5 +1,14 @@
-#headline {
-    padding-top: 200px;
+
+@media only screen and (min-width: 600px) {
+    #headline {
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #headline {
+        padding-top: 80px;
+    }
 }
 
 .section-headline {
@@ -17,7 +26,7 @@ body {
 
 div.containernav {
     margin-left: 50px;
-    padding-right: 50px;    
+    margin-right: 50px;    
 }
 
 #subtitle {
@@ -29,8 +38,16 @@ div.containernav {
     height: 400px;
 }
 
-.parallax-container {    
-    height: 100vh;
+@media only screen and (min-width: 600px) {
+    .parallax-container {    
+        height: 95vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax-container {    
+        height: 75vh;
+    }
 }
 
 .overlay {
@@ -60,10 +77,24 @@ body.background {
     overflow: hidden;
 }
 
-.wrap {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+@media only screen and (min-width: 600px) {
+    .wrap {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+.footainer {
+    margin-left: 50px;
 }
 
+@media only screen and (max-width: 600px) {
+    .wrap {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+  }
+  

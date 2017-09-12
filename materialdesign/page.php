@@ -8,9 +8,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down"> 
             <?php 
             $args = array(
-                'title_li'        => 0,
-            ); 
-
+                'title_li' => 0,); 
             wp_list_pages( $args ); ?>
 
         </ul>
@@ -37,6 +35,19 @@
       ?>
              
    </div><!-- main -->
-  
+
+<footer id="Footer" class="page-footer light-blue darken-4">
+      <div class="footer-copyright">
+        <div class="footainer">
+            © 2017 PhysikOnline
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <ul>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Kontakt</a></li>
+            </ul> -->
+        </div>
+      </div>
+</footer>          
  
 <?php get_footer(); ?>

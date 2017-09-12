@@ -49,49 +49,40 @@
 
 
 
-<div id="parent" class="white trans">
-
-              
-      <div class="extrapadding" >
-          <div class="container">
-              <div class="card">
-                  <div class="article">
-                     <h1 class="thin"><?php the_title(); ?></h1>
-                        <div id="meta">
-                        <span id="subtitle" class="thin small"> Von <?php the_author(); ?>, &emsp;  <i class="material-icons tiny thin">access_time</i>  <?php the_date('d.m.Y'); ?> </span>
-                        </div>  
-                      <span class="light"> 
-                      <?php the_content(); ?> 
-                      </span>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      
+<div id="parent" class="white trans">             
+    <div class="extrapadding" >
+        <div class="container">
+            <div class="card">
+                <div class="article">
+                    <h1 class="thin"><?php the_title(); ?></h1>
+                    <div id="meta">
+                    <span id="subtitle" class="thin small"> Von <?php the_author(); ?>, &emsp;  <i class="material-icons tiny thin">access_time</i>  <?php the_date('d.m.Y'); ?> </span>
+                    </div>  
+                    <span class="light"> 
+                    <?php the_content(); ?> 
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- erstellt am: <?php the_date('d.m.Y'); ?> | 
-                             von: <?php the_author(); ?> | 
-                            Kategorie(n): <?php the_category(', '); ?> -->
 
 
 
-
-
- <footer id="Footer" class="page-footer light-blue darken-4">
+<footer id="Footer" class="page-footer light-blue darken-4">
       <div class="footer-copyright">
-        <div class="container">
+        <div class="footainer">
             © 2017 PhysikOnline
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             <ul>
             <li><a href="#">Impressum</a></li>
             <li><a href="#">Datenschutz</a></li>
             <li><a href="#">Kontakt</a></li>
-            </ul>
+            </ul> -->
         </div>
       </div>
-</footer>
+</footer>  
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/assets/js/ThatsNotYoChild.js"></script>

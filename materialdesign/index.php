@@ -36,9 +36,54 @@ get_header();
 <!--END TITELBILD-->
 
 
-
  <!--MAIN-->       
 <div class="section grey lighten-3">
+    <!-- HIGHLIGHTS -->
+<div class="row wrap">
+<div class="section-headline" > 
+<h3 class="thin">
+Highlights
+</h3>
+    <?php
+    $args = array(
+        'tag' => get_queried_object()->slug, // If permalink like example.com/tag/example-tag, etc.
+        'posts_per_page' => -1,
+        'tax_query' => array( 
+            array(
+                'taxonomy' => 'category', // Taxonomy, in my case I need default post categories
+                'field'    => 'slug',
+                'terms'    => 'highlight', // Your category slug (I have a category 'interior')
+            ),
+            ) 
+    ); // Get all posts
+    $posts_new = get_posts( $args );
+    ?>
+    <div class="col s12 m4">
+    <div class="card horizontal" >
+        <div class="card-image">
+         <img id="card-img" src="
+          <?php if ( has_post_thumbnail() )
+            echo  wp_get_attachment_url( get_post_thumbnail_id($post->ID) )
+            ?>
+            ">
+        </div>
+        <div class="card-stacked" >
+            <div class="card-content">
+                <h4 class="light"> 
+                <?php the_title(); ?>
+                </h4>
+                <span class="light">
+                <?php the_content(); ?>
+                <br><br>
+                <a href="<?php the_permalink()?>"> mehr.. </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>    
+
 <div class="row wrap">   
 <div class="section-headline" > 
 <h3 class="thin">
@@ -89,14 +134,14 @@ Neueste Beiträge
       
  <footer id="Footer" class="page-footer light-blue darken-4">
       <div class="footer-copyright">
-        <div class="container">
+        <div class="footainer">
             © 2017 PhysikOnline
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             <ul>
             <li><a href="#">Impressum</a></li>
             <li><a href="#">Datenschutz</a></li>
             <li><a href="#">Kontakt</a></li>
-            </ul>
+            </ul> -->
         </div>
       </div>
 </footer>        
