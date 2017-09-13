@@ -37,53 +37,57 @@ get_header();
 
 
  <!--MAIN-->       
+
 <div class="section grey lighten-3">
-    <!-- HIGHLIGHTS -->
-<div class="row wrap">
-<div class="section-headline" > 
-<h3 class="thin">
-Highlights
-</h3>
-    <?php
-    $args = array(
-        'tag' => get_queried_object()->slug, // If permalink like example.com/tag/example-tag, etc.
-        'posts_per_page' => -1,
-        'tax_query' => array( 
-            array(
-                'taxonomy' => 'category', // Taxonomy, in my case I need default post categories
-                'field'    => 'slug',
-                'terms'    => 'highlight', // Your category slug (I have a category 'interior')
-            ),
-            ) 
-    ); // Get all posts
-    $posts_new = get_posts( $args );
-    ?>
-    <div class="col s12 m4">
-    <div class="card horizontal" >
-        <div class="card-image">
-         <img id="card-img" src="
-          <?php if ( has_post_thumbnail() )
-            echo  wp_get_attachment_url( get_post_thumbnail_id($post->ID) )
-            ?>
-            ">
-        </div>
-        <div class="card-stacked" >
-            <div class="card-content">
-                <h4 class="light"> 
-                <?php the_title(); ?>
-                </h4>
-                <span class="light">
-                <?php the_content(); ?>
-                <br><br>
-                <a href="<?php the_permalink()?>"> mehr.. </a>
-                </span>
+
+<!-- HIGHLIGHTS -->
+<!-- Highlight section zeigt nur den letzten mit highlight getaggten Beitrag an  -->
+<!-- <div class="row wrap">
+    <div class="section-headline" > 
+        <h3 class="thin">
+        Highlights
+        </h3>
+        <?php
+        get_the_excerpt();
+        $args = array(
+            'tag' => get_queried_object()->slug, // If permalink like example.com/tag/example-tag, etc.
+            'posts_per_page' => -1,
+            'tax_query' => array( 
+                array(
+                    'taxonomy' => 'category', // Taxonomy, in my case I need default post categories
+                    'field'    => 'slug',
+                    'terms'    => 'highlight', // Your category slug (I have a category 'interior')
+                ),
+                ) 
+        ); // Get all posts
+        $posts_new = get_posts( $args ); ?> 
+        
+        <div class="col s12 m12 l4">
+            <div class="card horizontal" >
+                <div class="card-image">
+                <img id="card-img" src="
+                <?php if ( has_post_thumbnail() )
+                    echo  wp_get_attachment_url( get_post_thumbnail_id($post->ID) )
+                    ?>
+                    ">
+                </div>
+                <div class="card-stacked" >
+                    <div class="card-content">
+                        <h4 class="light"> 
+                        <?php the_title(); ?>
+                        </h4>
+                        <span class="light">
+                        <?php the_excerpt(); ?>
+                        <br><br>
+                        <a href="<?php the_permalink()?>"> mehr.. </a>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>    
-
+</div>     -->
+<!-- END HIGHLIGHTS -->
 <div class="row wrap">   
 <div class="section-headline" > 
 <h3 class="thin">
@@ -108,7 +112,7 @@ Neueste Beiträge
                 <?php the_title(); ?>
                 </h4>
                 <span class="light">
-                <?php the_content(); ?>
+                <?php the_excerpt(); ?>
                 <br><br>
                 <a href="<?php the_permalink()?>"> mehr.. </a>
                 </span>
