@@ -12,18 +12,9 @@
 
 </head>
 
-<body
-<?php
-    if (has_post_thumbnail()) {
-        $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-         echo ' style="background: url('. $url.'); " '; }
-    else {
-        echo ' class="grey darken-4" ';
-         }
-?> >
+<body>
 <!-- NAVBAR -->    
 <div id="Header">
-
 <nav id="nav" class="light-blue darken-4 z-depth-3">
     <div class="containernav">
         <div class="nav-wrapper">
@@ -40,7 +31,6 @@
         </div>
     </div>
 </nav>    
-
 </div>
 <!--END NAVBAR-->
 
@@ -49,16 +39,16 @@
 
 
 
-<div id="parent" class="white trans">             
+<div >             
     <div class="extrapadding" >
-        <div class="container">
-            <div class="card">
+        <div class="singlewrap">
+            <div class="card z-depth-2">
                 <div class="article">
                     <h1 class="thin"><?php the_title(); ?></h1>
                     <div id="meta">
                     <span id="subtitle" class="thin small"> Von <?php the_author(); ?>, &emsp;  <i class="material-icons tiny thin">access_time</i>  <?php the_date('d.m.Y'); ?> </span>
                     </div>  
-                    <span class="light"> 
+                    <span class="light contentfontsize"> 
                     <?php the_content(); ?> 
                     </span>
                 </div>

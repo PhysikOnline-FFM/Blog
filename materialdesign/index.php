@@ -99,8 +99,8 @@ Neueste Beiträge
  
     <!-- CARD     -->
     <div class="card horizontal" >
-        <div class="card-image">
-         <img id="card-img" src="
+        <div class="card-image ">
+         <img class="card-img" src="
           <?php if ( has_post_thumbnail() )
             echo  wp_get_attachment_url( get_post_thumbnail_id($post->ID) )
             ?>
@@ -111,7 +111,7 @@ Neueste Beiträge
                 <h4 class="light"> 
                 <?php the_title(); ?>
                 </h4>
-                <span class="light">
+                <span class="light excerptfontsize">
                 <?php the_excerpt(); ?>
                 <br><br>
                 <a href="<?php the_permalink()?>"> mehr.. </a>
