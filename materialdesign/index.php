@@ -100,11 +100,10 @@ Neueste Beiträge
     <!-- CARD     -->
     <div class="card horizontal" >
         <div class="card-image ">
-         <img class="card-img" src="
-          <?php if ( has_post_thumbnail() )
-            echo  wp_get_attachment_url( get_post_thumbnail_id($post->ID) )
-            ?>
-            ">
+        <?php if( has_post_thumbnail())
+        echo ' 
+        <img class="card-img" src=' . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) . '">';
+        ?>
         </div>
         <div class="card-stacked" >
             <div class="card-content">
