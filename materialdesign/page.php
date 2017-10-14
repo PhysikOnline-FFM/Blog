@@ -4,7 +4,7 @@
 <nav id="nav" class="light-blue darken-4 z-depth-3">
     <div class="containernav">
         <div class="nav-wrapper">
-        <a href="<?php echo home_url(); ?>" class="brand-logo white-text">Logo</a>
+        <a href="<?php echo home_url(); ?>" class="brand-logo white-text"><img class="responsive-img" src="<?php bloginfo( 'template_url')?>/assets/images/Logo-Klein.png" style="padding-left: 40px; padding-right: 40px;"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down"> 
             <?php 
             $args = array(
@@ -40,12 +40,9 @@
       <div class="footer-copyright">
         <div class="footainer">
             © 2017 PhysikOnline
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             <ul>
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Kontakt</a></li>
-            </ul> -->
+            <li><a href="<?php echo home_url(); ?>/wp-admin">Bearbeiten</a>
+            </ul>
         </div>
       </div>
 </footer>          
